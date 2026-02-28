@@ -278,7 +278,7 @@ function! vimtex#syntax#core#init_rules() abort " {{{1
 
   " Definitions/Commands
   " E.g. \def \foo #1#2 {foo #1 bar #2 baz}
-  syntax match texCmdDef "\%#=1\\def\>" nextgroup=texDefArgName skipwhite skipnl
+  syntax match texCmdDef "\%#=1\\[egx]\?def\>" nextgroup=texDefArgName skipwhite skipnl
   syntax match texDefArgName contained nextgroup=texDefParmPre,texDefArgBody skipwhite skipnl "\%#=1\\[a-zA-Z@]\+"
   syntax match texDefArgName contained nextgroup=texDefParmPre,texDefArgBody skipwhite skipnl "\%#=1\\[^a-zA-Z@]"
   syntax match texDefParmPre contained nextgroup=texDefArgBody skipwhite skipnl "#[^{]*"
